@@ -31,9 +31,9 @@ public class Screenshoter {
 	public static byte[] makeScreenshot(WebDriver webDriver) {
 		File screenshot = ((TakesScreenshot) webDriver).getScreenshotAs(OutputType.FILE);
 		try {
-            FileUtils.copyFile(screenshot, new File("src/main/resources/"+outputDirectory+"/screenshot"+counter+".png"));
+            FileUtils.copyFile(screenshot, new File("src/test/resources/"+outputDirectory+"/screenshot"+counter+".png"));
             counter++;
-            return Files.readAllBytes(Paths.get("src/main/resources/"+outputDirectory, "screenshot"+(counter-1)+".png"));
+            return Files.readAllBytes(Paths.get("src/test/resources/"+outputDirectory, "screenshot"+(counter-1)+".png"));
         } catch (Exception e){
             e.printStackTrace();
             Assertions.fail("Не удалось сохранить файл на диск");

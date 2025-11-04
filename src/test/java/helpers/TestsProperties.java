@@ -5,7 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({"system:properties",
         "system:env",
-        "file:src/main/resources/tests.properties"
+        "file:src/test/resources/tests.properties"
 })
 /**
  * Класс описывает зависимости
